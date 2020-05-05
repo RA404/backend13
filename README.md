@@ -15,7 +15,7 @@
 
 ## How to install
 1. Склонировать проект
-* git clone git@github.com:RA404/backend12.git
+* git clone git@github.com:RA404/backend13.git
 2. Установите экпресс и пакеты
 * npm init -y
 * npm install express
@@ -25,10 +25,9 @@
 * npm install eslint --save-dev   
 * npm i eslint-config-airbnb-base --save-dev
 * npm i eslint-plugin-import --save-dev
-3. Запустить сервер (продакшн версию)
-* npm run start
-4. Запустить сервер (версия для разработчиков с hot reload)
-* npm run dev
+4. Установить mongodb
+5. Установить mongoose для взаимодействия с mongodb
+* npm i mongoose
 
 # Project link 
 [https://github.com/RA404/backend13](https://github.com/RA404/backend13)
