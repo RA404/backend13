@@ -28,6 +28,14 @@
 4. Установить mongodb
 5. Установить mongoose для взаимодействия с mongodb
 * npm i mongoose
+6. Запустить mongo
+* Зайти в папку bin mongodb
+* В терминале запустить команду $ mongod --dbpath <путь к базе данных>
+* В новом окне терминала запустить команду mongo
+7. Запустить сервер в среде для разработки
+* Из папки с проектом запустить команду npm run dev
+8. Запустить продакшн версию
+* Из папки с проектом запустить команду npm run start
 
 # Project link 
 [https://github.com/RA404/backend13](https://github.com/RA404/backend13)
