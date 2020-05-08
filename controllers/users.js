@@ -16,5 +16,5 @@ module.exports.createUser = (req, res) => {
   const { name, about, avatar } = req.body;
   userModel.create({ name, about, avatar })
     .then((user) => res.send({ data: user }))
-    .catch(() => res.status(500).send({ message: 'Failed to create user' }));
+    .catch((err) => ((err.name === 'ValidationError') ? res.status(400).send({ message: 'Avatar link validation error' }) : res.status(500).send({ message: 'Failed to create user' })));
 };

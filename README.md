@@ -19,6 +19,7 @@
 * npm init -y
 * npm install express
 * npm i body-parser
+* npm install validator
 3. Установить зависимости для разработчика
 * npm install nodemon -D
 * npm install eslint --save-dev   

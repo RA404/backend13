@@ -16,5 +16,5 @@ module.exports.createCard = (req, res) => {
   const { name, link } = req.body;
   cardModel.create({ name, link, owner: req.user._id })
     .then((card) => res.send({ data: card }))
-    .catch(() => res.status(500).send({ message: 'Failed to create card' }));
+    .catch((err) => ((err.name === 'ValidationError') ? res.status(400).send({ message: 'Link validation failed' }) : res.status(500).send({ message: 'Failed to create card' })));
 };
