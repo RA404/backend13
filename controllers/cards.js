@@ -8,7 +8,7 @@ module.exports.findAll = (req, res) => {
 
 module.exports.deleteCard = (req, res) => {
   cardModel.findByIdAndRemove({ _id: req.params.id })
-    .then((card) => res.send({ data: card }))
+    .then((card) => ((card) ? res.send({ data: card }) : res.status(404).send({ message: `Card with id '${req.params.id}' not found` })))
     .catch(() => res.status(500).send({ message: 'Failed to delete card' }));
 };
 
