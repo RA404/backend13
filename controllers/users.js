@@ -8,7 +8,7 @@ module.exports.findAll = (req, res) => {
 
 module.exports.findUser = (req, res) => {
   userModel.findById({ _id: req.params.id })
-    .then((user) => res.send({ data: user }))
+    .then((user) => ((user) ? res.send({ data: user }) : res.status(404).send({ message: `User with id '${req.params.id}' not found` })))
     .catch(() => res.status(500).send({ message: 'Failed to get user' }));
 };
 
